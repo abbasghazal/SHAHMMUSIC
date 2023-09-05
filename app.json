@@ -1,0 +1,74 @@
+{
+    "name": "Shahm Music",
+    "description": "افضل سورس ميوزك عربي يقوم بتشغيل الاغاني في المجموعات والقنواة مطور السورس @SHAHM4",
+    "logo": "https://telegra.ph/file/92f4bd4cdf907505a0549.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "SHAHM",
+    "shahmmusic",
+    "shahmmusicbot",
+    "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+      "API_ID": {
+        "description": "جيبها من هذا الرابط https://my.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "جيبها من هذا الرابط https://my.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "جيبه من هذا البوت  @Botfather",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "ايدي الحساب المتحكم اذا تريد ضيف اكثر من واحد خلي بينهم مسافه .",
+        "value": "6066647930",
+        "required": true
+      },        
+      "MONGO_DB_URI": {
+        "description": "لا تلعب بيها ابد",
+        "value": "mongodb+srv://ersh:antwai@cluster0.pforz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+        "required": true
+      },
+      "STRING_SESSION": {
+        "description": "كود بايروجرام الاستخرجته من هذا البوت @TERMUX_CODE1_BOT.",
+        "value": "",
+        "required": true
+      },
+      "HEROKU_API_KEY": {
+        "description": "ايبي كي هيروكو روح للاعدادات اخر خانه انسخه",
+        "value": "",
+        "required": false
+      },
+      "HEROKU_APP_NAME": {
+        "description": "نفس اسم تطبيقك الاول",
+        "value": "",
+        "required": false
+      },
+      "LOG_GROUP_ID": {
+        "description": "ايدي قناتك او مجموعتك .",
+        "value": "",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "stack": "container"
+  }
