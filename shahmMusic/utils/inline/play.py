@@ -39,7 +39,6 @@ async def handle_message(client, message):
         await message.reply_markup(start_pannel(None))
 
 # قم بتشغيل البوت
-app.run()
     bar = random.choice(selections)
     buttons = [
         [
@@ -345,3 +344,4 @@ def queue_markup(_, videoid, chat_id):
         ],
     ]
     return buttons
+app.run()
