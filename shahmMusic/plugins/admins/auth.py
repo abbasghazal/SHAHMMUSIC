@@ -14,15 +14,15 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS, adminlist
 from strings import get_command
-from shshmMusic import app
-from shshmMusic.utils.database import (
+from shahmMusic import app
+from shahmMusic.utils.database import (
     delete_authuser,
     get_authuser,
     get_authuser_names,
     save_authuser,
 )
-from shshmMusic.utils.decorators import AdminActual, language
-from shshmMusic.utils.formatters import int_to_alpha
+from shahmMusic.utils.decorators import AdminActual, language
+from shahmMusic.utils.formatters import int_to_alpha
 
 # Command
 AUTH_COMMAND = get_command("AUTH_COMMAND")
