@@ -11,7 +11,7 @@
 
 import config
 from config import PRIVATE_BOT_MODE
-from shahmmusic.core.mongo import mongodb
+from shahmMusic.core.mongo import mongodb
 
 channeldb = mongodb.cplaymode
 commanddb = mongodb.commands
