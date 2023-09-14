@@ -22,7 +22,6 @@ async def handle_message(client, message):
         await message.reply_markup(start_pannel(None))
 
 # قم بتشغيل البوت
-app.run()
     buttons = [
         [
             InlineKeyboardButton(
@@ -102,3 +101,4 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons.append([InlineKeyboardButton(text="", callback_data="https://t.me/SAHAM4")])
     return buttons
 
+app.run()
