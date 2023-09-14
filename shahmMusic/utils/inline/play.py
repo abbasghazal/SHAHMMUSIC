@@ -26,19 +26,6 @@ selections = [
 
 
 def stream_markup_timer(_, videoid, chat_id, played, dur):
-    app = Client("@SHAHM4")
-
-# استخدم هذا الديكوريتور لتحديد الدوال التي تستجيب للرسائل الواردة
-@app.on_message(filters.private)
-async def handle_message(client, message):
-    # تحقق مما إذا كان المستخدم مشتركًا بالفعل
-    if not await client.get_chat_member(chat_id="-1001895799003", user_id=message.from_user.id):
-        # إرسال رسالة للمستخدم يطلب فيها الاشتراك الإجباري
-        await message.reply_text("مرحبًا! يجب عليك الاشتراك حتى تتمكن من استخدام البوت.")
-        # إرسال لوحة المفاتيح الخاصة بالاشتراك
-        await message.reply_markup(start_pannel(None))
-
-# قم بتشغيل البوت
     bar = random.choice(selections)
     buttons = [
         [
@@ -344,4 +331,3 @@ def queue_markup(_, videoid, chat_id):
         ],
     ]
     return buttons
-app.run()
