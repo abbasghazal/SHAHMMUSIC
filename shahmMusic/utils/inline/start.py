@@ -9,19 +9,7 @@ from shahmMusic import app
 
 
 def start_pannel(_):
-    app = Client("@SHAHM4")
-
-# استخدم هذا الديكوريتور لتحديد الدوال التي تستجيب للرسائل الواردة
-@app.on_message(filters.private)
-async def handle_message(client, message):
-    # تحقق مما إذا كان المستخدم مشتركًا بالفعل
-    if not await client.get_chat_member(chat_id="-1001895799003", user_id=message.from_user.id):
-        # إرسال رسالة للمستخدم يطلب فيها الاشتراك الإجباري
-        await message.reply_text("مرحبًا! يجب عليك الاشتراك حتى تتمكن من استخدام البوت.")
-        # إرسال لوحة المفاتيح الخاصة بالاشتراك
-        await message.reply_markup(start_pannel(None))
-
-# قم بتشغيل البوت
+    
     buttons = [
         [
             InlineKeyboardButton(
@@ -100,5 +88,3 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             )
     buttons.append([InlineKeyboardButton(text="", callback_data="https://t.me/SAHAM4")])
     return buttons
-
-app.run()
