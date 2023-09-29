@@ -14,9 +14,9 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from shshmMusic import app
-from shshmMusic.utils.database.memorydatabase import get_loop, set_loop
-from shshmMusic.utils.decorators import AdminRightsCheck
+from shahmMusic import app
+from shahmMusic.utils.database.memorydatabase import get_loop, set_loop
+from shahmMusic.utils.decorators import AdminRightsCheck
 
 # Commands
 LOOP_COMMAND = get_command("LOOP_COMMAND")
