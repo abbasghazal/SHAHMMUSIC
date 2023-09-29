@@ -14,10 +14,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from shshmMusic import app
-from shshmMusic.core.call import shshm
-from shshmMusic.utils.database import is_muted, mute_on
-from shshmMusic.utils.decorators import AdminRightsCheck
+from shahmMusic import app
+from shahmMusic.core.call import shshm
+from shahmMusic.utils.database import is_muted, mute_on
+from shahmMusic.utils.decorators import AdminRightsCheck
 
 # Commands
 MUTE_COMMAND = get_command("MUTE_COMMAND")
