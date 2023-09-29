@@ -1,7 +1,7 @@
 #
-# Copyright (C) 2021-2022 by shshm_Help@Github, < https://github.com/Jankarikiduniya >.
+# Copyright (C) 2021-2022 by shahm _Help@Github, < https://github.com/Jankarikiduniya >.
 # A Powerful Music Bot Property Of Rocks Indian Largest Chatting Group
-# All rights reserved. © Alisha © shshm © shshm
+# All rights reserved. © Alisha © shahm  © shahm 
 
 
 import random
@@ -19,7 +19,7 @@ from config import (
     adminlist,
 )
 from shahmMusic import YouTube, app
-from shahmMusic.core.call import shshm
+from shahmMusic.core.call import shahm 
 from shahmMusic.misc import SUDOERS, db
 from shahmMusic.utils.database import (
     is_active_chat,
@@ -113,7 +113,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_1"], show_alert=True)
         await CallbackQuery.answer()
         await music_off(chat_id)
-        await shshm.pause_stream(chat_id)
+        await shahm .pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_2"].format(mention), disable_web_page_preview=True
         )
@@ -122,13 +122,13 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_3"], show_alert=True)
         await CallbackQuery.answer()
         await music_on(chat_id)
-        await shshm.resume_stream(chat_id)
+        await shahm .resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_4"].format(mention), disable_web_page_preview=True
         )
     elif command == "Stop" or command == "End":
         await CallbackQuery.answer()
-        await shshm.stop_stream(chat_id)
+        await shahm .stop_stream(chat_id)
         await set_loop(chat_id, 0)
         await CallbackQuery.message.reply_text(
             _["admin_9"].format(mention), disable_web_page_preview=True
@@ -138,7 +138,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_5"], show_alert=True)
         await CallbackQuery.answer()
         await mute_on(chat_id)
-        await shshm.mute_stream(chat_id)
+        await shahm .mute_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_6"].format(mention), disable_web_page_preview=True
         )
@@ -147,7 +147,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_7"], show_alert=True)
         await CallbackQuery.answer()
         await mute_off(chat_id)
-        await shshm.unmute_stream(chat_id)
+        await shahm .unmute_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_8"].format(mention), disable_web_page_preview=True
         )
@@ -188,7 +188,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     _["admin_10"].format(mention), disable_web_page_preview=True
                 )
                 try:
-                    return await shshm.stop_stream(chat_id)
+                    return await shahm .stop_stream(chat_id)
                 except:
                     return
         except:
@@ -197,7 +197,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 await CallbackQuery.message.reply_text(
                     _["admin_10"].format(mention), disable_web_page_preview=True
                 )
-                return await shshm.stop_stream(chat_id)
+                return await shahm .stop_stream(chat_id)
             except:
                 return
         await CallbackQuery.answer()
@@ -218,7 +218,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     _["admin_11"].format(title)
                 )
             try:
-                await shshm.skip_stream(chat_id, link, video=status)
+                await shahm .skip_stream(chat_id, link, video=status)
             except Exception:
                 return await CallbackQuery.message.reply_text(_["call_9"])
             theme = await check_theme(chat_id)
@@ -249,7 +249,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 return await mystic.edit_text(_["call_9"])
             try:
-                await shshm.skip_stream(chat_id, file_path, video=status)
+                await shahm .skip_stream(chat_id, file_path, video=status)
             except Exception:
                 return await mystic.edit_text(_["call_9"])
             theme = await check_theme(chat_id)
@@ -271,7 +271,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             await mystic.delete()
         elif "index_" in queued:
             try:
-                await shshm.skip_stream(chat_id, videoid, video=status)
+                await shahm .skip_stream(chat_id, videoid, video=status)
             except Exception:
                 return await CallbackQuery.message.reply_text(_["call_9"])
             button = telegram_markup(_, chat_id)
@@ -285,7 +285,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             await CallbackQuery.edit_message_text(txt)
         else:
             try:
-                await shshm.skip_stream(chat_id, queued, video=status)
+                await shahm .skip_stream(chat_id, queued, video=status)
             except Exception:
                 return await CallbackQuery.message.reply_text(_["call_9"])
             if videoid == "telegram":
@@ -366,7 +366,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             if n == 0:
                 return await mystic.edit_text(_["admin_30"])
         try:
-            await shshm.seek_stream(
+            await shahm .seek_stream(
                 chat_id,
                 file_path,
                 seconds_to_min(to_seek),
