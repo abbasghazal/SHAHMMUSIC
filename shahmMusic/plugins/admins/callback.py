@@ -18,10 +18,10 @@ from config import (
     TELEGRAM_VIDEO_URL,
     adminlist,
 )
-from shshmMusic import YouTube, app
-from shshmMusic.core.call import shshm
-from shshmMusic.misc import SUDOERS, db
-from shshmMusic.utils.database import (
+from shahmMusic import YouTube, app
+from shahmMusic.core.call import shshm
+from shahmMusic.misc import SUDOERS, db
+from shahmMusic.utils.database import (
     is_active_chat,
     is_music_playing,
     is_muted,
@@ -32,12 +32,12 @@ from shshmMusic.utils.database import (
     mute_on,
     set_loop,
 )
-from shshmMusic.utils.decorators.language import languageCB
-from shshmMusic.utils.formatters import seconds_to_min
-from shshmMusic.utils.inline.play import panel_markup_1, stream_markup, telegram_markup
-from shshmMusic.utils.stream.autoclear import auto_clean
-from shshmMusic.utils.thumbnails import gen_thumb
-from shshmMusic.utils.theme import check_theme
+from shahmMusic.utils.decorators.language import languageCB
+from shahmMusic.utils.formatters import seconds_to_min
+from shahmMusic.utils.inline.play import panel_markup_1, stream_markup, telegram_markup
+from shahmMusic.utils.stream.autoclear import auto_clean
+from shahmMusic.utils.thumbnails import gen_thumb
+from shahmMusic.utils.theme import check_theme
 
 wrong = {}
 
