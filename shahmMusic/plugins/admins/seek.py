@@ -15,7 +15,7 @@ from pyrogram.types import Message
 from config import BANNED_USERS
 from strings import get_command
 from shahmMusic import YouTube, app
-from shahmMusic.core.call import shshm
+from shahmMusic.core.call import shahm
 from shahmMusic.misc import db
 from shahmMusic.utils import AdminRightsCheck, seconds_to_min
 
@@ -63,7 +63,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
         if n == 0:
             return await message.reply_text(_["admin_30"])
     try:
-        await shshm.seek_stream(
+        await shahm.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),
