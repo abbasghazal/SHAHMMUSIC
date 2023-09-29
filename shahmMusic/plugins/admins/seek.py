@@ -14,10 +14,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from shshmMusic import YouTube, app
-from shshmMusic.core.call import shshm
-from shshmMusic.misc import db
-from shshmMusic.utils import AdminRightsCheck, seconds_to_min
+from shahmMusic import YouTube, app
+from shahmMusic.core.call import shshm
+from shahmMusic.misc import db
+from shahmMusic.utils import AdminRightsCheck, seconds_to_min
 
 # Commands
 SEEK_COMMAND = get_command("SEEK_COMMAND")
