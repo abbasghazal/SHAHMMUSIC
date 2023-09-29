@@ -15,7 +15,7 @@ from pyrogram.types import Message
 from config import BANNED_USERS
 from strings import get_command
 from shahmMusic import app
-from shahmMusic.core.call import shshm
+from shahmMusic.core.call import shahm
 from shahmMusic.utils.database import is_music_playing, music_off
 from shahmMusic.utils.decorators import AdminRightsCheck
 
@@ -33,7 +33,7 @@ async def pause_admin(cli, message: Message, _, chat_id):
     if not await is_music_playing(chat_id):
         return await message.reply_text(_["admin_1"], disable_web_page_preview=True)
     await music_off(chat_id)
-    await shshm.pause_stream(chat_id)
+    await shahm.pause_stream(chat_id)
     await message.reply_text(
         _["admin_2"].format(message.from_user.mention), disable_web_page_preview=True
     )
