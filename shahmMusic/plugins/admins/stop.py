@@ -3,7 +3,7 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from shshmMusic import app
+from shahmMusic import app
 
 #
 # Copyright (C) 2021-2022 by shshm_Help@Github, < https://github.com/Jankarikiduniya >.
@@ -16,9 +16,9 @@ from shshmMusic import app
 # All rights reserved. © Alisha © shshm © Yukki
 
 
-from shshmMusic.core.call import shshm
-from shshmMusic.utils.database import set_loop
-from shshmMusic.utils.decorators import AdminRightsCheck
+from shahmMusic.core.call import shshm
+from shahmMusic.utils.database import set_loop
+from shahmMusic.utils.decorators import AdminRightsCheck
 
 # Commands
 STOP_COMMAND = get_command("STOP_COMMAND")
